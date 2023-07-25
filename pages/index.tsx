@@ -4,7 +4,7 @@ import { BiBook } from "react-icons/bi";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center gap-6 flex-wrap items-center p-20">
+    <div className="flex flex-col justify-center gap-6 flex-wrap items-center h-full w-full">
       <SquareHomePage
         colorBgClass="bg-green-300"
         icon={<BsSearch />}
