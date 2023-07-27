@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint:check": "prettier --check ."
+		"lint:check": "prettier --check .",
+		"lint:fix": "prettier --write ."
 	},
 	"dependencies": {
 		"@chakra-ui/react": "^2.8.0",
