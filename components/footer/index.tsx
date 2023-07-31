@@ -2,6 +2,7 @@ import {
 	Drawer,
 	DrawerBody,
 	DrawerContent,
+	DrawerOverlay,
 	useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
@@ -14,6 +15,11 @@ import { useRouter } from "next/router";
 function Footer() {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const router = useRouter();
+
+	const handleOnClick = (path: string) => {
+		onClose();
+		router.push(path)
+	}
 	return (
 		<div
 			onClick={onOpen}
@@ -24,27 +30,28 @@ function Footer() {
 				MENU
 			</div>
 			<Drawer placement={"bottom"} onClose={onClose} isOpen={isOpen}>
+			<DrawerOverlay background={"-moz-initial"}/>
 				<DrawerContent w={"512px"} mx={"auto"}>
 					<DrawerBody className="bg-orange-400 flex flex-col items-center gap-5 text-black">
 						<MenuItensButton
-							onClick={() => router.push("/")}
+							onClick={() => handleOnClick("/")}
 							iconComponent={<AiOutlineHome />}
 							iconName="HOME"
 						/>
 						<MenuItensButton
 							iconComponent={<CgProfile />}
 							iconName="PERFIL"
-							onClick={() => router.push("/profile")}
+							onClick={() => handleOnClick("/profile")}
 						/>
 						<MenuItensButton
 							iconComponent={<BiStore />}
 							iconName="LOJA"
-							onClick={() => router.push("/store")}
+							onClick={() => handleOnClick("/store")}
 						/>
 						<MenuItensButton
 							iconComponent={<AiOutlineTrophy />}
 							iconName="RANKING"
-							onClick={() => router.push("/ranking")}
+							onClick={() => handleOnClick("/ranking")}
 						/>
 					</DrawerBody>
 				</DrawerContent>
