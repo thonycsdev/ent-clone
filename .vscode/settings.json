@@ -1,5 +1,3 @@
 {
-    "conventionalCommits.scopes": [
-        "Fix no footer"
-    ]
+	"conventionalCommits.scopes": ["Fix no footer"]
 }

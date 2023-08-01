@@ -18,8 +18,8 @@ function Footer() {
 
 	const handleOnClick = (path: string) => {
 		onClose();
-		router.push(path)
-	}
+		router.push(path);
+	};
 	return (
 		<div
 			onClick={onOpen}
@@ -30,7 +30,7 @@ function Footer() {
 				MENU
 			</div>
 			<Drawer placement={"bottom"} onClose={onClose} isOpen={isOpen}>
-			<DrawerOverlay background={"-moz-initial"}/>
+				<DrawerOverlay background={"-moz-initial"} />
 				<DrawerContent w={"512px"} mx={"auto"}>
 					<DrawerBody className="bg-orange-400 flex flex-col items-center gap-5 text-black">
 						<MenuItensButton
