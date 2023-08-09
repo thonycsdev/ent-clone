@@ -1,5 +1,4 @@
 import React from "react";
-import { AiFillHome } from "react-icons/ai";
 
 interface FooterBottonProps {
 	icon: React.ReactNode;

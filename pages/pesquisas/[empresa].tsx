@@ -1,4 +1,4 @@
-import AccordionMain from "@/components/UI/Accordion";
+import AccordionMain from "@/root/components/UI/Accordion";
 import React from "react";
 
 function Pesquisas() {

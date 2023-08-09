@@ -1,7 +1,7 @@
-import SquareHomePage from "@/components/SquareHomePage";
 import { BsCheck2Square, BsSearch } from "react-icons/bs";
 import { BiBook } from "react-icons/bi";
 import { useRouter } from "next/router";
+import SquareHomePage from "@/root/components/SquareHomePage";
 
 export default function Home() {
 	const router = useRouter();
