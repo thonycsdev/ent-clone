@@ -1,9 +1,11 @@
-import { useRouter } from "next/router";
+import AccordionMain from "@/components/UI/Accordion";
 import React from "react";
 
 function Pesquisas() {
-	const router = useRouter();
-	return <div>{router.query.empresa}</div>;
+
+	return <div className="w-4/5 mx-auto mt-14 rounded-3xl">
+		<AccordionMain/>
+	</div>;
 }
 
 export default Pesquisas;
